@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club NCAE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="neon-text">CLUB NCAE</h1>
+            <p class="subtitle">The most exclusive spot on the web.</p>
+        </header>
+
+        <main>
+            <div class="bouncer-area">
+                <div class="velvet-rope"></div>
+                <h2>VIP Lounge Entrance</h2>
+                <p>Sorry, the list is full tonight. Members only.</p>
+
+                <form action="/vip" method="post">
+                    <!-- 
+                        Heh, these n00bs will never get in. 
+                        I put a disabled attribute on the button! 
+                        Unbreakable security!
+                    -->
+                    <button type="submit" class="vip-btn" disabled>ENTER VIP LOUNGE</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

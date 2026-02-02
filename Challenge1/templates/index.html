@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperSecureCorp - Internal News Feed</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="logo-icon">🍪</span>
+                <h1>SuperSecureCorp</h1>
+            </div>
+            <p class="tagline">Securing Tomorrow, Today™</p>
+        </header>
+
+        <nav class="status-bar">
+            <span class="status-badge {% if role == 'admin' %}admin{% else %}guest{% endif %}">
+                {{ role|upper }} MODE
+            </span>
+            <span class="welcome">Welcome, Intern!</span>
+        </nav>
+
+        <main>
+            {% if role == 'admin' %}
+            <!-- ADMIN VIEW -->
+            <section class="news-section admin-section">
+                <h2>📰 Real News - Classified</h2>
+                
+                <article class="news-card featured">
+                    <span class="news-badge">TOP SECRET</span>
+                    <h3>CEO's Secret Message</h3>
+                    <p>Congratulations! You've discovered the admin panel. C. Monster is impressed with your skills.</p>
+                    <div class="flag-container">
+                        <span class="flag-label">🚩 FLAG:</span>
+                        <code class="flag">{{ flag }}</code>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <span class="news-badge">INTERNAL</span>
+                    <h3>Q4 Security Audit Results</h3>
+                    <p>Our authentication system passed the audit with flying colors! The cookie-based auth is "virtually unhackable" according to our intern security team.</p>
+                </article>
+
+                <article class="news-card">
+                    <span class="news-badge">MEMO</span>
+                    <h3>New Password Policy</h3>
+                    <p>All employees must now use passwords at least 4 characters long. We're serious about security here at SuperSecureCorp!</p>
+                </article>
+            </section>
+
+            {% else %}
+            <!-- GUEST VIEW -->
+            <section class="news-section guest-section">
+                <h2>🍽️ Today's Cafeteria Menu</h2>
+                <p class="access-notice">⚠️ You are viewing in <strong>Guest Mode</strong>. Only administrators can access the Real News.</p>
+                
+                <div class="menu-grid">
+                    <article class="menu-card">
+                        <span class="meal-type">🌅 Breakfast</span>
+                        <h3>Scrambled Eggs Deluxe</h3>
+                        <p>Farm-fresh eggs with herbs and cheese</p>
+                        <span class="allergens">Allergens: Eggs, Dairy, Gluten</span>
+                    </article>
+
+                    <article class="menu-card">
+                        <span class="meal-type">☀️ Lunch Special</span>
+                        <h3>C. Monster's Cookie Platter</h3>
+                        <p>Assorted cookies with chocolate chips, oatmeal raisin, and peanut butter varieties</p>
+                        <span class="allergens">Allergens: Wheat, Dairy, Eggs, Peanuts, Tree Nuts, Soy</span>
+                    </article>
+
+                    <article class="menu-card">
+                        <span class="meal-type">🥗 Healthy Option</span>
+                        <h3>Garden Salad Bowl</h3>
+                        <p>Mixed greens with cherry tomatoes, cucumbers, and balsamic dressing</p>
+                        <span class="allergens">Allergens: Mustard, Sulfites</span>
+                    </article>
+
+                    <article class="menu-card">
+                        <span class="meal-type">🍕 Comfort Food</span>
+                        <h3>Margherita Pizza</h3>
+                        <p>Classic pizza with fresh mozzarella, tomatoes, and basil</p>
+                        <span class="allergens">Allergens: Wheat, Dairy</span>
+                    </article>
+
+                    <article class="menu-card">
+                        <span class="meal-type">🥤 Beverage</span>
+                        <h3>Freshly Squeezed OJ</h3>
+                        <p>100% orange juice, no added sugar</p>
+                        <span class="allergens">Allergens: None</span>
+                    </article>
+
+                    <article class="menu-card">
+                        <span class="meal-type">🍰 Dessert</span>
+                        <h3>Chocolate Lava Cake</h3>
+                        <p>Warm chocolate cake with a molten center, served with vanilla ice cream</p>
+                        <span class="allergens">Allergens: Wheat, Dairy, Eggs, Soy</span>
+                    </article>
+                </div>
+            </section>
+            {% endif %}
+        </main>
+
+        <footer>
+            <p>&copy; 2025 SuperSecureCorp. All rights reserved.</p>
+            <p class="ceo-quote">"Security is our middle name!" — C. Monster, CEO</p>
+        </footer>
+    </div>
+</body>
+</html>

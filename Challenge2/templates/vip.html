@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club NCAE - VIP</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container vip-container">
+        <header>
+            <h1 class="neon-text gold">VIP ACCESS GRANTED</h1>
+        </header>
+
+        <main>
+            <div class="vip-content">
+                <p class="celebration">Welcome to the inner circle.</p>
+                <div class="flag-box">
+                    <span class="label">Here is your flag:</span>
+                    <code class="flag">{{ flag }}</code>
+                </div>
+                <a href="/" class="back-btn">Return to Lobby</a>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+version: '3'
+services:
+  challenge2:
+    build: .
+    ports:
+      - "5001:5000"
+    restart: unless-stopped

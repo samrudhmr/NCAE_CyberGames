@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Redundancy Department</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+        :root {
+            --bg-color: #f0f2f5;
+            --text-color: #2c3e50;
+            --primary-color: #34495e;
+            --accent-color: #e67e22;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 2rem;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.5s ease;
+        }
+
+        .logo:hover {
+            transform: rotate(360deg);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.8;
+            margin-bottom: 3rem;
+        }
+
+        .content-box {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(230, 126, 34, 0.6);
+            background-color: #d35400;
+        }
+
+        .footer {
+            margin-top: 4rem;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            border-top: 1px solid #ddd;
+            padding-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container" style="padding: 0;">
+            <h1>Department of Redundancy</h1>
+            <div>"Re-establishing the established since 1920"</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <img src="/static/images/seal.png" alt="Official Seal Seal" class="logo">
+
+        <div class="content-box">
+            <h2>Official Welcome and Greetings Portal</h2>
+            <p>
+                Welcome to the Department of Redundancy Department. We are pleased to welcome you to our official online
+                digital web presence.
+                Our mission is to ensure that all redundant tasks are performed repeatedly and duplicated for assurance
+                and certainty.
+            </p>
+            <p>
+                Authorized personnel, staff, employees, and workers may proceed to the secure authentication login
+                portal below.
+            </p>
+            <br>
+            <a href="/login" class="btn">Proceed to Login Access</a>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 Department of Redundancy Department. All rights reserved. Rights are reserved by the Department.
+            <br>
+            Unauthorized access is strictly prohibited and forbidden.
+        </div>
+    </div>
+
+</body>
+
+</html>
